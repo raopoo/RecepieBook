@@ -15,7 +15,7 @@
     <!-- Link css file -->
     <link href="./css/style.css" rel="stylesheet">
     <!-- Link JS file -->
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>Family Recepies</title>
 </head>
 <body>
@@ -35,16 +35,93 @@
             <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-        <button class="btn btn-outline-success" type="button">Create Recepie</button>
-        <!-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Recepie</button>
       </div>
     </div>
   </nav>
   <!-- Nav bar ends here -->
   <h1>Welcome to Pooja's Recepies</h1>
+
+    <!-- Modal starts here -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Recepie</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <!-- Form starts here -->
+        <form class="row g-3 needs-validation" novalidate>
+          <div>
+            <h3>Recepie details</h3>
+          </div>
+          <div class="mb-3">
+            <label for="RecepieName" class="form-label">Recepie Name</label>
+            <input type="text" class="form-control" id="RecepieName" required  minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Recepie Name must be over 5 Characters!
+           </div>
+          </div>
+          <div class="mb-3">
+            <label for="Ingredients" class="form-label">Ingredients</label>
+            <textarea class="form-control" id="Ingredients" placeholder="Enter the Ingredients" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid Ingredient
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Procedure" class="form-label">Procedure</label>
+            <textarea class="form-control" id="Procedure" placeholder="Enter the Procedure" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid step for cooking
+            </div>
+            <div class="p-3">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+         </form>
+        <!-- Form ends here -->
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- modal ends here -->
     
+    <!-- Sample Recepie cards -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Spinach Pasta</h5>
+            <p class="card-text">Boiled pasta, spinach, onion, corn, capsicum, salt, oil</p>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">Close</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Veg pizza</h5>
+            <p class="card-text">Pizza base, cheese, veggies, pizza sauce,tofu</p>
+            <a href="#" class="btn btn-primary">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample Recepie cards ends here -->
   </body>
 </html>
