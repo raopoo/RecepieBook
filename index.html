@@ -15,12 +15,13 @@
     <!-- Link css file -->
     <link href="./css/style.css" rel="stylesheet">
     <!-- Link JS file -->
-    <script src="index.js" defer></script>
+    <script src="./js/recepieManager.js" defer></script>
+    <script src="./js/index.js" defer></script>
     <title>Family Recepies</title>
 </head>
 <body>
 <!-- Nav bar starts here -->
-<nav class="navbar navbar-expand-lg navbar-dark nav-img">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Pooja's Recepies</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +36,7 @@
             <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Recepie</button>
+        <button class="btn btn-success" id="createNew" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Recepie</button>
       </div>
     </div>
   </nav>
@@ -59,7 +60,7 @@
           </div>
           <div class="mb-3">
             <label for="RecepieName" class="form-label">Recepie Name</label>
-            <input type="text" class="form-control" id="RecepieName" required  minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$">
+            <input type="text" class="form-control" id="recepieName" required  minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$">
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -69,7 +70,7 @@
           </div>
           <div class="mb-3">
             <label for="Ingredients" class="form-label">Ingredients</label>
-            <textarea class="form-control" id="Ingredients" placeholder="Enter the Ingredients" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
+            <textarea class="form-control" id="ingredients" placeholder="Enter the Ingredients" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -79,7 +80,7 @@
           </div>
           <div class="mb-3">
             <label for="Procedure" class="form-label">Procedure</label>
-            <textarea class="form-control" id="Procedure" placeholder="Enter the Procedure" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
+            <textarea class="form-control" id="procedure" placeholder="Enter the Procedure" required minlength="5" pattern="^[^-\s][a-zA-Z0-9_\s-]+$"></textarea>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -98,29 +99,31 @@
   </div>
 </div>
     <!-- modal ends here -->
-    
-    <!-- Sample Recepie cards -->
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Spinach Pasta</h5>
-            <p class="card-text">Boiled pasta, spinach, onion, corn, capsicum, salt, oil</p>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Close</a>
-          </div>
+    <div class="container page">
+      <div class="row">
+        <div class="col text-center p-3">
+         <h2> My Recepies</h2>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Veg pizza</h5>
-            <p class="card-text">Pizza base, cheese, veggies, pizza sauce,tofu</p>
-            <a href="#" class="btn btn-primary">Close</a>
-          </div>
+      <div class="row">
+        <div class="col">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <div class="card sampleRecepie">
+                <div class="card-body">
+                  <h5 class="card-title name">Spinach Pasta</h5>
+                  <p class="card-text ing">Boiled pasta, spinach, onion, corn, capsicum, salt, oil</p>
+                  <p class="card-text pro">Make sure the pasta is cooked</p>
+                  <button class="btn btn-primary delete-btn">Delete</button>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+    <!-- Sample Recepie cards -->
+  
 
     <!-- Sample Recepie cards ends here -->
   </body>
