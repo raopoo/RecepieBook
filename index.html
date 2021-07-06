@@ -21,19 +21,19 @@
 </head>
 <body>
 <!-- Nav bar starts here -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light" id=top>
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Pooja's Recepies</a>
+      <a class="navbar-brand">Pooja's Recepies</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#top">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#aboutMe">Contact</a>
           </li>
         </ul>
         <button class="btn btn-success" id="createNew" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Recepie</button>
@@ -105,11 +105,11 @@
          <h2> My Recepies</h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row sampleRecepie">
         <div class="col">
           <ul class="list-group list-group-horizontal">
             <li class="list-group-item">
-              <div class="card sampleRecepie">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title name">Spinach Pasta</h5>
                   <p class="card-text ing">Boiled pasta, spinach, onion, corn, capsicum, salt, oil</p>
@@ -122,9 +122,14 @@
         </div>
       </div>
     </div>
-    <!-- Sample Recepie cards -->
-  
-
-    <!-- Sample Recepie cards ends here -->
+      <!-- footer -->
+<div class="row text-center mt-10" id="aboutMe">
+  <h4>My contact</h4>
+  <p>Contact:0431774656</p>
+  <p>Email:raopooj@gmail.com</p>
+  <p class="text-center">All Rights reserved 2021</p>
+  <a type="link" href="#top" class="footer text-end">Back to top</a>
+</div>
+    </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 const createRecepie = (recepieId,recepieName,ingredients,procedure) => {
     let displayRecepie = `<li class="list-group-item" data-current="${recepieId}">
-    <div class="card sampleRecepie">
+    <div class="card">
       <div class="card-body">
         <h5 class="card-title name">${recepieName}</h5>
         <p class="card-text ing">${ingredients}</p>
@@ -10,7 +10,7 @@ const createRecepie = (recepieId,recepieName,ingredients,procedure) => {
     </div>
   </li>`
   return displayRecepie;
-  alert("display recepie was called");
+  console.log(displayRecepie);
 }
 class RecepieManager{
     constructor(currentId = 0){
@@ -26,11 +26,14 @@ class RecepieManager{
         Ingredients: ingredients,
         Procedure: procedure
     }
+    // console.log(sampleRecepie);
     this.recepieList.push(sampleRecepie);
    }
    render(){
+      alert("render was called");
        let recepieArray = [];
        for(let i=0; i< this.recepieList.length; i++){
+        //  alert(this.recepieList.length);
            let currentRecepie = this.recepieList[i];
            recepieArray.push(createRecepie(currentRecepie.ID,currentRecepie.Name,currentRecepie.Ingredients,currentRecepie.Procedure));
        }
