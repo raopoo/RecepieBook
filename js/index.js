@@ -51,7 +51,7 @@ page.addEventListener('click', function (event) {
   let deleteCheck = event.target.classList.contains('delete-btn"');
   if(deleteCheck){
     const parentRecepie = event.target.parentElement.parentElement.parentElement;
-    let recepieId = Number(parentTask.dataset.current);
+    let recepieId = Number(parentRecepie.dataset.current);
     recepies.deleteRecepie(recepieId);
     recepies.save();
     recepies.render();

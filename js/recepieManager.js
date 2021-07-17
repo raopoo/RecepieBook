@@ -1,5 +1,6 @@
 const createRecepie = (recepieId,recepieName,ingredients,procedure) => {
-    let displayRecepie = `<li class="list-group-item" data-current="${recepieId}">
+  let displayRecepie = ``;
+    displayRecepie = `<li class="list-group-item" data-current="${recepieId}">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title name">${recepieName}</h5>
@@ -42,6 +43,7 @@ class RecepieManager{
    }
      //creating the getRecepiebyID method
      getRecepieById(currentId){
+       alert("getRecepie was called");
       let foundRecepie = {};
       for(let i=0; i< this.recepieList.length; i++){
         if(this.recepieList[i].Id === currentId){
@@ -60,6 +62,7 @@ class RecepieManager{
     }
     // Load method for local storage
     load(){
+      alert("load was called");
      if(localStorage.getItem("Recepie")){
        let recepieJson = localStorage.getItem("Recepie");
        this.recepieList = JSON.parse(recepieJson);
