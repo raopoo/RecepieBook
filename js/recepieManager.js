@@ -6,7 +6,7 @@ const createRecepie = (recepieId,recepieName,ingredients,procedure) => {
         <h5 class="card-title name">${recepieName}</h5>
         <p class="card-text ing">${ingredients}</p>
         <p class="card-text pro">${procedure}</p>
-        <button class="btn btn-primay delete-btn">Delete</button>
+        <button class="btn btn-dark delete-btn">Delete</button>
       </div>
     </div>
   </li>`
@@ -19,7 +19,7 @@ class RecepieManager{
         this.recepieList = [];
    }
    addRecepie(recepieName,ingredients,procedure){
-     alert("add recepie was called");
+    //  alert("add recepie was called");
     this.recepieId++;
     const sampleRecepie = {
         ID: this.recepieId,
