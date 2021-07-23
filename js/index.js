@@ -48,9 +48,9 @@ const clearform = () => {
 const page = document.querySelector(".page");
 //Checking if the delete botton was clicked
 page.addEventListener('click', function (event) {
-  let deleteCheck = event.target.classList.contains('delete-btn"');
+  let deleteCheck = event.target.classList.contains('delete-btn');
   if(deleteCheck){
-    const parentRecepie = event.target.parentElement.parentElement.parentElement;
+    const parentRecepie = event.target.parentElement.parentElement;
     let recepieId = Number(parentRecepie.dataset.current);
     recepies.deleteRecepie(recepieId);
     recepies.save();
