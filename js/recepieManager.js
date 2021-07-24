@@ -1,7 +1,7 @@
 const createRecepie = (recepieId,recepieName,ingredients,procedure) => {
   let displayRecepie = ``;
-    displayRecepie = `<li class="list-group-item">
-    <div class="card" data-current="${recepieId}" >
+    displayRecepie = `<li class="list-group-item" style="max-width: 20rem">
+    <div class="card" data-current="${recepieId}" style="max-width: 20rem" >
       <div class="card-body">
         <h5 class="card-title name">${recepieName}</h5>
         <p class="card-text ing">${ingredients}</p>

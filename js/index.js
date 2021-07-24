@@ -32,12 +32,14 @@ const clearform = () => {
             let ingredients = document.querySelector("#ingredients").value;
             let procedure = document.querySelector("#procedure").value;
             recepies.addRecepie(recepieName,ingredients,procedure);
-            recepies.render();
             recepies.save();
+            recepies.load();
+            recepies.render();
             // Stops refresh, clears the form, hides the pop up window
             event.preventDefault();
             clearform();
             myModal.hide();
+            
           }
           form.classList.add('was-validated')
         }, false)
